@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>南开大学公共场所准入管理系统</title>
+    <script src=""></script>
+    <style>
+        /* reset */
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        input {
+            caret-color: #07c160;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .card-con {
+            display: flex;
+            height: 100%;
+            flex-wrap: wrap;
+            /* align-content: space-around; */
+        }
+
+        header,
+        article,
+        footer {
+            width: 100%;
+        }
+
+        header {
+            align-self: center;
+        }
+
+        header,
+        article {
+            text-align: center;
+            color: #000;
+        }
+
+        header>div div:last-child {
+            color: #333;
+        }
+
+        article img {
+            width: 140px;
+        }
+
+        article>div:last-child h3 {
+            color: #666;
+        }
+
+        .allow img {
+            animation: twinkle 1s infinite ease-in;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        footer {
+            color: #333;
+            font-size: 18px;
+            padding-left: 45px;
+        }
+
+        footer>div span:last-child {
+            color: #666;
+        }
+
+        /* modal dialog */
+        .fixed-full {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .modal {
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 10;
+        }
+
+
+        .success {
+            background-color: #d2ffe6;
+        }
+
+        .info {
+            background-color: #ffcce0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container success">
+        <!-- 允许进入 -->
+        <div class="card-con">
+            <header>
+                <!-- 关注人员 -->
+                <div>
+                    <h1 id="username">111</h1>
+                    <div id="userid">222</div>
+                    <div id="deptname">333</div>
+                </div>
+            </header>
+            <article>
+                <div class="img-con allow">
+                    <img src="./image/round_check_fill.png" alt="">
+                </div>
+                <div>
+                    <h1>允许进入</h1>
+                    <h3 id="placename">津南理科食堂一楼</h3>
+                </div>
+            </article>
+            <footer>
+                <div>
+                    <span>有效期：</span>
+                    <span>永不过期</span>
+                </div>
+                <div>
+                    <span>时　间：</span>
+                    <span id="formatTime"></span>
+                </div>
+            </footer>
+        </div>
+
+        <!-- modal -->
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
