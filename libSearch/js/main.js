@@ -41,3 +41,8 @@ $(document).ready(function () {
         if (r != null) return unescape(r[2]); return null;
     }
 })(jQuery);
+
+function abc() {
+    $("#send").click()
+    return false
+}
