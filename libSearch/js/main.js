@@ -8,7 +8,8 @@ $(document).ready(function () {
             data: JSON.stringify({
                 searchMethod: $('#searchByName').prop('checked') ? "Name" : "Table",
                 Id: $("#id").val(),
-                isAll: ($('#isAll').prop('checked')) ? 1 : 0
+                isAll: ($('#isAll').prop('checked')) ? 1 : 0,
+                today:($('#Today').prop('checked'))
             }),
             dataType: "json",
             success: function (result) {
